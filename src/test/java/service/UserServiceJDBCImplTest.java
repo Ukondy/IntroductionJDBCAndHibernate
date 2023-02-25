@@ -7,7 +7,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class UserServiceJDBCImplTest {
+public class UserServiceJDBCImplTest {
     private final UserService userService = new UserServiceJDBCImpl();
     private final String testName = "Oleg";
     private final String testLastName = "Olegovich";
@@ -33,7 +33,7 @@ class UserServiceJDBCImplTest {
     }
 
     @Test
-    void saveUser() {
+    public void saveUser() {
         try {
             userService.dropUserTable();
             userService.createUserTable();
@@ -49,7 +49,7 @@ class UserServiceJDBCImplTest {
     }
 
     @Test
-    void removeUserById() {
+    public void removeUserById() {
         try {
             userService.dropUserTable();
             userService.createUserTable();
@@ -61,7 +61,7 @@ class UserServiceJDBCImplTest {
     }
 
     @Test
-    void getAllUsers() {
+    public void getAllUsers() {
         try {
             userService.dropUserTable();
             userService.createUserTable();
@@ -76,7 +76,7 @@ class UserServiceJDBCImplTest {
     }
 
     @Test
-    void clearUserTable() {
+    public void cleanUserTable() {
         try {
             userService.dropUserTable();
             userService.createUserTable();
