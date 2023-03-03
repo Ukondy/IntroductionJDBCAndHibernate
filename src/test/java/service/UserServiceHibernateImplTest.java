@@ -7,14 +7,14 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class UserServiceHibernateImplTest {
+public class UserServiceHibernateImplTest {
     private final UserService userService = new UserServiceHibernateImpl();
     private final String testName = "Oleg";
     private final String testLastName = "Olegovich";
     private final byte testAge = 45;
 
     @Test
-    void createUserTable() {
+    public void createUserTable() {
         try {
             userService.dropUserTable();
             userService.createUserTable();
@@ -24,7 +24,7 @@ class UserServiceHibernateImplTest {
     }
 
     @Test
-    void dropUserTable() {
+    public void dropUserTable() {
         try {
             userService.dropUserTable();
         } catch(Exception e) {
@@ -33,7 +33,7 @@ class UserServiceHibernateImplTest {
     }
 
     @Test
-    void saveUser() {
+    public void saveUser() {
         try {
             userService.dropUserTable();
             userService.createUserTable();
@@ -49,7 +49,7 @@ class UserServiceHibernateImplTest {
     }
 
     @Test
-    void removeUserById() {
+    public void removeUserById() {
         try {
             userService.dropUserTable();
             userService.createUserTable();
@@ -61,7 +61,7 @@ class UserServiceHibernateImplTest {
     }
 
     @Test
-    void getAllUsers() {
+    public void getAllUsers() {
         try {
             userService.dropUserTable();
             userService.createUserTable();
@@ -76,7 +76,7 @@ class UserServiceHibernateImplTest {
     }
 
     @Test
-    void clearUserTable() {
+    public void clearUserTable() {
         try {
             userService.dropUserTable();
             userService.createUserTable();
